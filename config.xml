@@ -1,15 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Loja</name>
+    <name>DuoSystem</name>
     <description>
-        A blank PhoneGap app.
+        Soluções customizadas para gestão em saúde
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+        DuoSystem Team
     </author>
+	
     <content src="index.html" />
     <access origin="*" />
-	<feature name="InAppBrowser">
-    <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <plugin name="cordova-plugin-inappbrowser" spec="~2.0.1" />
+    <engine name="browser" spec="~5.0.3" />
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.1" />
+	
 
 </widget>
