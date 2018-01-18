@@ -12,7 +12,14 @@
   		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 		<script type="text/javascript" charset="utf-8">
 		
-		document.addEventListener("deviceready", onDeviceReady, false);
+		//document.addEventListener("deviceready", onDeviceReady, false);
+		
+		
+		var ref = cordova.InAppBrowser.open('http://www.duosystem.com.br', '_blank', 'location=yes,hidden=yes');
+		ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+ 		ref.addEventListener('loadstop', function(event) { ref.show(); });
+		ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+
 
 		// device APIs are available
 		//
