@@ -23,7 +23,8 @@
 		} else {
 		  //navigator.geolocation.getCurrentPosition(onSuccess, onError);
 		  //window.location="http://www.myapp.com";
-		  var ref = window.open('http://www.duosystem.com.br', '_blank', 'location=no,hidden=yes');
+		  var ref = window.open('http://www.duosystem.com.br', '_blank', 'location=yes,hidden=yes');
+		  ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
  		  ref.addEventListener('loadstop', function(event) { ref.show(); });
 		  ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
 		}
@@ -32,7 +33,7 @@
 		
 		function onSuccess(position) {
 		     
-			 var ref = window.open('http://www.duosystem.com.br?lat=' + position.coords.latitude + '&long=' + position.coords.longitude, '_blank', 'location=no,hidden=yes');
+			 var ref = window.open('http://www.duosystem.com.br?lat=' + position.coords.latitude + '&long=' + position.coords.longitude, '_blank', 'location=yes,hidden=yes');
 			 //ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
 			 ref.addEventListener('loadstop', function(event) { ref.show(); });
 			 ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
